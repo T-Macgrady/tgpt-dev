@@ -1,6 +1,6 @@
 {
-  "name": "smol-dev-js",
-  "version": "1.2.16",
+  "name": "@tgpt/dev",
+  "version": "1.0.0",
   "description": "CLI based smol AI developer, you can use today (for JS projects)",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@js-util/config-loader": "^1.2.7",
+    "@tgpt/open-api": "^1.0.0",
     "chalk": "^4.1.2",
     "glob": "^10.2.4",
     "inquirer": "^9.2.3",

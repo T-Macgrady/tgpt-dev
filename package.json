@@ -1,12 +1,15 @@
 {
-  "name": "root",
+  "name": "tgpt",
   "version": "1.0.0",
-  "description": "gpt-dev",
+  "description": "tmac-gpt",
   "main": "index.js",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
+  "bin": {
+    "tgpt": "packages/smol-dev-js/src/mainCLI.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

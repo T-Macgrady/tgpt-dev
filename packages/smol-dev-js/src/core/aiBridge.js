@@ -1,7 +1,7 @@
 // Dependencies
 // ---
 const config = require("./config");
-const AiBridge = require("ai-bridge");
+const AiBridge = require("@tgpt/open-api");
 
 // Load the AI module
 // ---
