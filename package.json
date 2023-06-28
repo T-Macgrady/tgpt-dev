@@ -8,7 +8,7 @@
     "packages/*"
   ],
   "bin": {
-    "tgpt": "packages/smol-dev-js/src/mainCLI.js"
+    "tgpt-dev": "packages/dev/src/mainCLI.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

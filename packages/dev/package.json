@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "smol-dev-js": "./src/mainCLI.js"
+    "tgpt-dev": "./src/mainCLI.js"
   },
   "author": "",
   "license": "Apache-2.0",
