@@ -1,0 +1,27 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "description": "gpt-dev",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/T-Macgrady/gpt-dev.git"
+  },
+  "keywords": [
+    "gpt",
+    "ai"
+  ],
+  "author": "tmac.lzh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/T-Macgrady/gpt-dev/issues"
+  },
+  "homepage": "https://github.com/T-Macgrady/gpt-dev#readme"
+}
