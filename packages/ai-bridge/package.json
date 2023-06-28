@@ -1,0 +1,41 @@
+{
+  "name": "ai-bridge",
+  "version": "1.1.0",
+  "description": "AI connector library, which helps simplify API usage, and provide out of the box caching.",
+  "main": "src/AiBridge",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uilicious/ai-bridge"
+  },
+  "keywords": [
+    "AI",
+    "cache",
+    "OpenAI"
+  ],
+  "homepage": "https://github.com/uilicious/ai-bridge",
+  "author": "Eugene Cheah (@picocreator)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@js-util/config-object-merge": "=1.0.4",
+    "fast-json-stable-stringify": "=2.1.0",
+    "gpt3-tokenizer": "=1.1.5",
+    "hjson": "=3.2.2",
+    "mongodb": "=4.13.0",
+    "node-fetch": "=2.6.7",
+    "node-jsonl": "=0.1.0",
+    "promise-queue": "=2.2.5",
+    "proper-lockfile": "=4.1.2",
+    "sleep-promise": "^9.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^10.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
