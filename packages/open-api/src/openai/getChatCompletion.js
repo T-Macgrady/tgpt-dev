@@ -116,17 +116,12 @@ async function getChatCompletion(
 				try {
 					respJson = await resp.json();
 				} catch (error) {
-					console.log('getCompletion fetch error', resp.body);
-					resp = { body: 'error' };
-					respJson = {
-						choices: [
-							{
-								message: {
-									content: '{"error":"GET_COMPLETION_FETCH_ERROR"}',
-								},
-							},
-						],
-					};
+					console.log('--getCompletion fetch error--', resp, resp.body);
+					if( useRawApi ) {
+						return "{}";
+					}
+		
+					return "";
 				}
 				// Throw error accordingly
 				if( respJson.error ) {

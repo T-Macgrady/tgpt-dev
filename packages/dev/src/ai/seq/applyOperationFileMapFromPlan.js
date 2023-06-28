@@ -93,7 +93,7 @@ module.exports = async function getOperationFileMapFromPlan(currentPlan, operati
 			}
 
 			// Move it
-			await fs.promises.rename( fullOldPath, fullNewPath );
+			renameIfExist(fullOldPath, fullNewPath);
 		}
 	}
 
@@ -113,7 +113,7 @@ module.exports = async function getOperationFileMapFromPlan(currentPlan, operati
 			}
 
 			// Move it
-			await fs.promises.rename( fullOldPath, fullNewPath );
+			renameIfExist(fullOldPath, fullNewPath);
 		}
 	}
 
@@ -264,4 +264,12 @@ module.exports = async function getOperationFileMapFromPlan(currentPlan, operati
 	await Promise.all(asyncOpPromiseArr);
 	console.log(`🐣 [ai]: Finished current set of async spec/src file update (2nd round)`)
 
+}
+
+function renameIfExist(srcFile, destFile) {
+	if( fs.existsSync(srcFile) ) {
+		fs.renameSync(srcFile, destFile);
+	} else {
+		console.log(`🐣 [ai]: File ${srcFile} does not exist, skipping rename`)
+	}
 }

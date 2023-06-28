@@ -8,12 +8,11 @@ module.exports = async function getActionList() {
 	return [
 		"List of actions you the AI dev can do for the user (you are not allowed to do anything else):", 
 		`- Delete files or folders`,
+		`- Move files or folders`,
 		`- Generate/Edit a code/spec file, with the given instructions`,
 		`- Update code/spec from spec/code`,
 		"",
 		"You are not able to do the following (ask the user to do it instead):",
-		// move files or folders will trigger error:cannot find rename of undefined
-		`- Move files or folders`,
 		"- run and test the code",
 		"- compile or commit changes",
 		"",
