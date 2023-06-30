@@ -22,7 +22,12 @@ const config = new ConfigLoader({
 		// Main ai-dev config
 		// ---
 		config: {
-
+      provider: 'openai',
+      gpt4_32k: false,
+      short_description: '',
+      spec_dir: 'spec',
+      src_dir: './',
+      src_include: ['**'],
 		},
 
 		// The following config settings is for the ai-bridge module
@@ -31,7 +36,8 @@ const config = new ConfigLoader({
 
 			// openAI key
 			provider: {
-				// openai: "<CHANGE TO YOUR OPENAI KEY>"
+				// default public free key,sometimes maybe not stable
+				"openai": "sk-9apaEvwdnmyPnb3uMXx0oaCJzdB413ytPbmnoBb6j1yl89hI"
 			},
 			
 			// // Number of provider requests that can occur concurrently
@@ -39,6 +45,7 @@ const config = new ConfigLoader({
 			
 			// Latency delay between request, to be used with rate limit, to further "tune down"
 			providerLatencyAdd: 0,
+			providerRateLimit: 2,
 			
 			// Caching controls
 			//--------------------
