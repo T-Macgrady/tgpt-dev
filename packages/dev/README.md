@@ -1,6 +1,6 @@
 # @tgpt/dev
 
-类 gpt-engineer 的编码助手，JS 定制化版本，前端可用，内置 api key
+AI 编程工具正在从 copilot 的函数级上下文代码生成慢慢往项目级代码生成发展。
 
 可以进行反复对话交互开发，将其想象为通过命令行进行结对编程的助手。
 
@@ -32,6 +32,7 @@ npx 可能会比较慢，可以 clone 到本地，可以定制化修改
 ```bash
 git clone git@github.com:T-Macgrady/tgpt-dev.git
 cd tgpt-dev
+pnpm i
 tgpt-dev setup / npm link
 ```
 
@@ -46,7 +47,7 @@ npx @tgpt/dev prompt
 
 告诉它你想做什么，如果你没啥头绪，可以直接回车让它给你一些建议。
 
-![tgpt-prompt](https://github.com/T-Macgrady/tgpt-dev/blob/main/demos/tgpt-prompt-express.gif?raw=true)
+![tgpt-prompt](https://github.com/T-Macgrady/tgpt-dev/blob/main/demos/tgpt-prompt-express_1.gif?raw=true)
 
 完成任务后，你 review 代码，可能会发现了错误？将其粘贴进来，让 AI 为你建议一个修复方案。或者告诉它如何修复。
 
@@ -66,7 +67,7 @@ npx @tgpt/dev prompt
 
 ## 根据文档生成代码
 
-md 详细描述你的需求，最好是列出每个需要的文件并描述功能（[Example](./example/pokedex/spec/README.md)），这样才能构建更大型的项目同时保证准确度
+md 详细描述你的需求，最好是列出每个需要的文件并描述功能（[Example](./packages/dev/example/pokedex/spec/README.md)），这样才能构建更大型的项目同时保证准确度
 
 准备好你所有的项目规格文件了吗？运行 spec2code，让 AI 为你生成。
 
