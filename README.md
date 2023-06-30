@@ -32,6 +32,7 @@ npx 可能会比较慢，可以 clone 到本地，可以定制化修改
 ```bash
 git clone git@github.com:T-Macgrady/tgpt-dev.git
 cd tgpt-dev
+pnpm i
 tgpt-dev setup / npm link
 ```
 
