@@ -75,7 +75,7 @@ module.exports = {
 	// - 1 total varation with a temprature of 0
 	// 
 	// Note that having different settings, like stop character, etc. Will result to a different cache record.
-	"temperatureKeyMultiplier" : 10,
+	"temperatureKeyMultiplier" : 3,
 
 	// Default settings overwrite
 	//

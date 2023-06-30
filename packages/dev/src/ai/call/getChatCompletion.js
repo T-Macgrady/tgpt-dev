@@ -31,7 +31,7 @@ module.exports = async function getChatCompletion(messages, promptOpts = {}, str
 		}	
 	}
 	// todo: remove this, and use the defaultConfig
-	model = "gpt-4e"
+	model = "gpt-3.5-turbo-16k";
 
 	// Override the config
 	promptOpts.model = model;
