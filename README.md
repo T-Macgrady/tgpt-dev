@@ -1,80 +1,75 @@
-# Smol-Dev-JS
+# @tgpt/dev
 
-You own personal AI dev, which you can direct development in a collebrative back and forth experience.
-Think of it as pair-programming, via the command line.
+属于你自己的个人AI开发助手，可以进行反复对话交互开发，将其想象为通过命令行进行结对编程的助手。
 
-# Commands & Setup
+显然，这会消耗很多的token，不过我已经预设了默认免费的openai_key！！！开箱即用
 
-## Update to node 18
 
-```bash
-sudo npm install -g n
-sudo n 18
-```
+# [EN](./README_EN.md)
 
-## smol-dev-js setup 
+## Feature
 
-**Reminder: Do check on your openAI dashboard if you have GPT4 access**
+- [根据提示生成代码](#prompt)
+- [根据代码生成文档](#spec2code)
+- [根据文档生成代码](#code2spec)
 
-Install via NPM
+## Setup
 
-```bash
-npm install -g smol-dev-js
-```
-or local dev, Customize the code:
-```bash
-npm link smol-dev-js
-```
+在新目录或者已有项目中执行setup，按照提示配置项目信息
 
-Either start a new JS project, or go to an existing nodejs project, run the setup function, and follow the process
+> 如果你没啥想法，可以一直回车，因为我已经预设了默认值，包括openai_key。之后可以在`mol-devc-js/config`中再次修改
 
 ```bash
 cd my-js-project
-smol-dev-js setup
+npx @tgpt/dev setup
 ```
 
-![smol-dev-setup](https://raw.githubusercontent.com/PicoCreator/smol-dev-js/main/docs/smol-dev-setup.gif)
+![tgpt-setup](./packages/dev/demos/tgpt-setup.gif)
 
-This will ask for your API keys, and setup the `.smol-dev-js` folder which it will use internally for you
+你也可以选择clone到本地定制化修改后然后`npm link`
 
-## smol-dev-js prompt
+## 根据提示生成文档
 
-Run the following command to start the smol-dev-js process, in your new or existing JS project
+适合根据提示需求生成基础样板代码（草稿），再逐步优化，更加精细的需求可以使用spec2code
 
 ```bash
-smol-dev-js prompt
+cd my-js-project
+npx @tgpt/dev prompt
 ```
 
-![smol-dev-run](https://raw.githubusercontent.com/PicoCreator/smol-dev-js/main/docs/smol-dev-run.gif)
+告诉它你想做什么，如果你没啥头绪，可以直接回车让它给你一些建议。
 
-Once everything is generated, review the code and begin a loop where you ...
+![tgpt-prompt](./packages/dev/demos/tgpt-prompt-express.gif)
 
-> engineering with prompts, rather than prompt engineering
+完成任务后，你review代码，可能会发现了错误？将其粘贴进来，让AI为你建议一个修复方案。或者告诉它如何修复。
 
-Found an error? paste it in and let the AI suggest a fix for you. Or tell it what to do to fix it.
+如此反复，直到满意为止。
 
-Loop until happiness is attained. Or that you find the AI being unhelpful, and take back control.
+可能结果不尽如人意？在迭代优化之前先考虑成为更优秀的prompt工程师吧...
 
-## smol-dev-js spec2code
+## 根据代码生成文档
 
-Got all your project specifications file ready? Run th spec2code, and let the smol-dev AI generate it for you.
+你可以
 
-The general format of the spec folder should be
-- `README.md` (high level spec)
-- `NOTES.md` (any more point form feedback/instruction to pass to the AI globally, which may might not make sense in the spec)
-- `<folder>/<filename>.<type>.md` (spec for a specific file)
+- 批量生成md
 
-> You will need the spec folder to be configured
+对于简单反复的文档编写感到乏味？可以让  AI 为你批量生成。
 
-## smol-dev-js code2spec
+![tgpt-prompt](./packages/dev/demos/tgpt-code2spec.gif)
 
-Lazy to write specs to an existing codebase from scratch, let the smol-dev AI generate a draft for you.
 
-> You will need the spec folder to be configured
+## 根据代码生成文档
 
-## Want to customize the settings further?
+md详细描述你的需求，最好是列出每个需要的文件并描述功能（[Example](./packages/dev/example/)），这样才能构建更大型的项目同时保证准确度
 
-After generating the config, you can look into `.smol-dev-js/config` folder for various settings, including
-- local cache settings
-- caching with mongoDB (you can use the free tier)
-- rate limits
+准备好你所有的项目规格文件了吗？运行spec2code，让AI为你生成。
+
+新增spec文件夹，通用格式应该是：
+
+- `README.md`（主要有它就行）
+- `NOTES.md`（全局传递给AI的更多反馈/指令，可能在spec中没有意义）
+- `<folder>/<filename>.<type>.md`（特定文件的spec）
+
+## END
+
+根据实践，目前它更适合帮助做一些基础重复工作，更精细的工作可以结合使用copilot。
