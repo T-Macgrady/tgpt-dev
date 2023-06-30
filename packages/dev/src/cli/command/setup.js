@@ -52,7 +52,7 @@ module.exports = {
 				message: 'Which provider do you want to use?',
 				choices: [
 					{ title: 'OpenAI', value: 'openai' },
-					{ title: 'Anthropic (preferred)', value: 'anthropic' },
+					{ title: 'Anthropic', value: 'anthropic' },
 				],
 				initial: configValues.provider == "anthropic" ? 1 : 0
 			}
@@ -61,8 +61,6 @@ module.exports = {
 		// Lets update the config for the selection
 		let provider = promptConfig.provider;
 		configValues.provider = provider;
-		// todo: remove this
-		aibridgeConfig.provider.openai = promptConfig.openai_key = "sk-9apaEvwdnmyPnb3uMXx0oaCJzdB413ytPbmnoBb6j1yl89hI";
 
 		// Lets ask for the API key
 		if( provider == "anthropic" ) {
