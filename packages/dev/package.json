@@ -1,6 +1,6 @@
 {
   "name": "@tgpt/dev",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "CLI based smol AI developer, you can use today (for JS projects)",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,18 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/T-Macgrady/tgpt-dev.git"
+  },
+  "keywords": [
+    "gpt",
+    "ai",
+    "gpt-engineer"
+  ],
+  "bugs": {
+    "url": "https://github.com/T-Macgrady/tgpt-dev/issues"
+  },
+  "homepage": "https://github.com/T-Macgrady/tgpt-dev#readme"
 }
