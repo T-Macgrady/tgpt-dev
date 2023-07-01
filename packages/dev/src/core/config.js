@@ -28,6 +28,9 @@ const config = new ConfigLoader({
       spec_dir: 'spec',
       src_dir: './',
       src_include: ['**'],
+			limits: {
+				"FILE_LIST": 10000
+			}
 		},
 
 		// The following config settings is for the ai-bridge module
@@ -45,7 +48,6 @@ const config = new ConfigLoader({
 			
 			// Latency delay between request, to be used with rate limit, to further "tune down"
 			providerLatencyAdd: 0,
-			providerRateLimit: 2,
 			
 			// Caching controls
 			//--------------------
