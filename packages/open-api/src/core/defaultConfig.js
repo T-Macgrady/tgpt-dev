@@ -160,7 +160,7 @@ module.exports = {
 			"model": "gpt-3.5-turbo",
 			"temperature": 0,
 		
-			"total_tokens": 4050,
+			"total_tokens": 20000,
 			"max_tokens": null,
 		
 			"top_p": 1,
